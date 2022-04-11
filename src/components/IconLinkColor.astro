@@ -1,0 +1,15 @@
+---
+  interface Props {
+    color: 'slate'
+  }
+
+  const colors = {
+    'slate': 'text-slate-600'
+  }
+
+ const { color } = Astro.props as Props
+---
+
+<div class={`${colors[color]}`}>
+  <slot />
+</div>
